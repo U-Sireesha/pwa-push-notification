@@ -30,6 +30,9 @@ app.post("/subscribe", (req, res) => {
     .sendNotification(subscription, payload)
     .catch((err) => console.error(err));
 });
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./my-app/build/index.html"));
+});
 
 const port = 5000;
 app.listen(port, () => {

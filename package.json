@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd my-app && npm run build",
-    "production": "npm run build && npx nodemon server.js --ignore my-app"
+    "prepare-client": "cd my-app && npm install  && npm run build",
+    "production": "npm install && npm run prepare-client && npx nodemon server.js --ignore my-app"
   },
   "keywords": [],
   "author": "",

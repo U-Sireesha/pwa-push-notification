@@ -1,5 +1,5 @@
 import express from "express";
-import morgan from "morgan";
+// import morgan from "morgan";
 import webpush from "web-push";
 import bodyParser from "body-parser";
 import path, { dirname } from "path";
@@ -8,7 +8,7 @@ import cors from "cors";
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.resolve("./my-app/build")));
 

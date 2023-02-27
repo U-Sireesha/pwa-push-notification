@@ -63,12 +63,12 @@ this.addEventListener("fetch", (event) => {
 });
 this.addEventListener("push", (e) => {
   const data = e.data.json();
-  // console.log(data);
-  // console.log("Push Recieved...");
-  this.registration.showNotification(data.title, {
-    body: "Notification!",
-    icon: "./logo192.png",
-  });
+  const options = {
+    body: data.body,
+  };
+  console.log(data);
+  console.log("Push Recieved...");
+  this.registration.showNotification(data.title, options);
 });
 // this.addEventListener(
 //   "fetch",

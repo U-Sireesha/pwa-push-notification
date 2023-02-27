@@ -6,14 +6,14 @@ const registerSw = async () => {
     const register = await navigator.serviceWorker.register(
       `${process.env.PUBLIC_URL}/sw.js`
     );
-    console.log("success", register.scope);
+    // console.log("success", register.scope);
     const subscription = await register.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: urlBase64ToUint8Array(publicKey),
     });
     await axios.post("/subscribe", subscription);
   } catch (err) {
-    console.log("failure", err);
+    console.error("failure", err);
   }
 
   // Send Push Notification

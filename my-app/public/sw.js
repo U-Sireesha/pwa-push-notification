@@ -3,7 +3,7 @@ const CACHE_NAME = "version-2";
 this.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log("cache opened");
+      // console.log("cache opened");
       cache.addAll([
         "/static/js/bundle.js",
         "/",
@@ -27,7 +27,7 @@ this.addEventListener("install", (event) => {
 //listen for fetch event
 
 this.addEventListener("fetch", (event) => {
-  console.log("fetch event");
+  // console.log("fetch event");
   event.respondWith(
     caches.open(CACHE_NAME).then((cache) => {
       // console.log(event.request.method);
@@ -63,8 +63,8 @@ this.addEventListener("fetch", (event) => {
 });
 this.addEventListener("push", (e) => {
   const data = e.data.json();
-  console.log(data);
-  console.log("Push Recieved...");
+  // console.log(data);
+  // console.log("Push Recieved...");
   this.registration.showNotification(data.title, {
     body: "Notification!",
     icon: "./logo192.png",

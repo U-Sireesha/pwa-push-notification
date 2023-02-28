@@ -39,5 +39,5 @@ app.get("*", (req, res) => {
 
 const port = 5000;
 app.listen(port, () => {
-  console.log(`serving is running in a port ${port}`);
+  console.log(`server is running in a port ${port}`);
 });

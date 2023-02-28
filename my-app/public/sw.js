@@ -19,6 +19,8 @@ this.addEventListener("install", (event) => {
         "https://jsonplaceholder.typicode.com/users",
         "https://fastly.picsum.photos/id/866/800/400.jpg?hmac=sxL_lzsk2TVLY-OUFV2tHXWPnVHSbTjVg9TrwmVLpzM",
         "/post",
+        "/static/js/main.3a4d16cf.js",
+        "/static/css/main.756af292.css",
       ]);
     })
   );
